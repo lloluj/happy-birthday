@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>С днём рождения, Кристи! ❤️</title>
-    <!-- Подключаем шрифт для элегантности -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Кристи, с днём рождения! 🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,7 +14,7 @@
 
         body {
             min-height: 100vh;
-            background: linear-gradient(145deg, #fce4ec 0%, #f8bbd0 100%);
+            background: linear-gradient(145deg, #fdf6f0 0%, #f5e3d9 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,141 +24,129 @@
             overflow-x: hidden;
         }
 
-        /* Карточка-поздравление */
         .card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 48px;
-            padding: 48px 40px;
-            max-width: 720px;
+            background: rgba(255, 247, 242, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 40px;
+            padding: 44px 36px;
+            max-width: 680px;
             width: 100%;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15), 0 10px 25px rgba(183, 28, 28, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 6px 18px rgba(180, 120, 100, 0.12);
             border: 1px solid rgba(255, 255, 255, 0.5);
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
             text-align: center;
             position: relative;
             z-index: 2;
         }
 
         .card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-4px);
         }
 
-        /* Имя с особым оформлением */
         .name {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3.5rem, 15vw, 5.2rem);
+            font-size: clamp(3.2rem, 14vw, 4.8rem);
             font-weight: 700;
-            background: linear-gradient(135deg, #880e4f, #d81b60, #ad1457);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-            text-shadow: 0 4px 20px rgba(216, 27, 96, 0.2);
-            position: relative;
+            color: #3d2c24;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .emoji-big {
+            font-size: 2.8rem;
             display: inline-block;
+            margin: 0 6px;
         }
 
-        .name::after {
-            content: "✨";
-            font-size: 2.2rem;
-            position: absolute;
-            right: -50px;
-            top: -10px;
-            opacity: 0.8;
-            animation: sparkle 2s infinite alternate;
-        }
-
-        .name::before {
-            content: "💖";
-            font-size: 2rem;
-            position: absolute;
-            left: -50px;
-            top: 0px;
-            opacity: 0.7;
-            animation: sparkle 2.4s infinite alternate-reverse;
-        }
-
-        @keyframes sparkle {
-            0% { transform: scale(0.8) rotate(-5deg); opacity: 0.5; }
-            100% { transform: scale(1.2) rotate(8deg); opacity: 1; }
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #4a2c3a;
-            letter-spacing: 3px;
-            margin-bottom: 28px;
-            background: rgba(255, 255, 255, 0.3);
+        .subhead {
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: #6b4f40;
+            background: rgba(235, 215, 200, 0.4);
             display: inline-block;
-            padding: 6px 24px;
-            border-radius: 60px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 4px 22px;
+            border-radius: 40px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(200, 170, 155, 0.2);
         }
 
         .message {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #3e2a34;
-            margin: 28px 0 20px;
-            padding: 0 8px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #3f2e26;
+            background: rgba(250, 240, 235, 0.5);
+            border-radius: 28px;
+            padding: 20px 22px;
+            margin: 16px 0 20px;
+            border-left: 4px solid #dbaa8b;
+            text-align: left;
             font-weight: 400;
-            background: rgba(255, 255, 255, 0.25);
-            border-radius: 32px;
-            padding: 24px 20px;
-            border-left: 4px solid #d81b60;
-            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3);
         }
 
         .message i {
-            font-family: 'Playfair Display', serif;
             font-style: italic;
-            color: #880e4f;
+            color: #8f6b58;
         }
 
-        .flower-line {
+        .tagline {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            font-size: 2rem;
-            margin: 16px 0 8px;
             flex-wrap: wrap;
+            gap: 8px 18px;
+            font-size: 1.5rem;
+            margin: 12px 0 10px;
         }
 
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #d81b60, #ad1457);
-            color: white;
+            background: #dbaa8b;
+            color: #2d1f19;
             font-weight: 600;
-            padding: 16px 40px;
+            padding: 14px 38px;
             border-radius: 60px;
             border: none;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
+            font-size: 1.05rem;
             cursor: pointer;
-            transition: 0.25s ease;
-            box-shadow: 0 6px 20px rgba(216, 27, 96, 0.35);
-            margin-top: 18px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.2s ease;
+            box-shadow: 0 4px 14px rgba(180, 120, 100, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            letter-spacing: 0.3px;
         }
 
         .btn:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 30px rgba(216, 27, 96, 0.5);
-            background: linear-gradient(135deg, #ad1457, #880e4f);
+            background: #cf9a7a;
+            transform: scale(1.02);
+            box-shadow: 0 8px 22px rgba(180, 120, 100, 0.3);
         }
 
         .btn:active {
             transform: scale(0.97);
         }
 
-        /* Плавающие сердечки (интерактив) */
-        .hearts-container {
+        .counter {
+            font-size: 0.85rem;
+            margin-top: 14px;
+            color: #7a5f4f;
+            background: rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            padding: 4px 18px;
+            border-radius: 30px;
+            backdrop-filter: blur(2px);
+            font-weight: 400;
+        }
+
+        .footer {
+            margin-top: 22px;
+            font-size: 0.8rem;
+            color: #a18373;
+            letter-spacing: 0.5px;
+            font-weight: 300;
+        }
+
+        /* Плавающие эмодзи (не романтичные) */
+        .floating-container {
             position: fixed;
             top: 0;
             left: 0;
@@ -170,263 +157,204 @@
             overflow: hidden;
         }
 
-        .heart {
+        .float-item {
             position: absolute;
             font-size: 1.8rem;
-            opacity: 0.3;
-            animation: floatHeart linear infinite;
+            opacity: 0.25;
+            animation: floatUp linear infinite;
             user-select: none;
-            filter: drop-shadow(0 4px 10px rgba(216, 27, 96, 0.2));
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.05));
         }
 
-        @keyframes floatHeart {
+        @keyframes floatUp {
             0% {
-                transform: translateY(110vh) rotate(0deg) scale(0.6);
+                transform: translateY(110vh) rotate(0deg) scale(0.7);
                 opacity: 0.1;
             }
-            20% { opacity: 0.5; }
-            80% { opacity: 0.6; }
+            30% { opacity: 0.35; }
+            80% { opacity: 0.4; }
             100% {
-                transform: translateY(-20vh) rotate(720deg) scale(1.1);
+                transform: translateY(-20vh) rotate(360deg) scale(1.1);
                 opacity: 0;
             }
         }
 
-        /* Адаптивность */
+        /* Адаптив */
         @media (max-width: 550px) {
             .card {
-                padding: 32px 20px;
-                border-radius: 32px;
-            }
-            .name::before,
-            .name::after {
-                display: none;
+                padding: 28px 18px;
+                border-radius: 30px;
             }
             .message {
-                font-size: 1rem;
-                padding: 18px 14px;
+                font-size: 0.95rem;
+                padding: 16px 14px;
             }
             .btn {
-                padding: 14px 28px;
-                font-size: 1rem;
+                padding: 12px 24px;
                 width: 100%;
+                font-size: 1rem;
             }
-            .flower-line {
-                font-size: 1.6rem;
-                gap: 8px;
+            .tagline {
+                font-size: 1.2rem;
+                gap: 4px 12px;
+            }
+            .subhead {
+                font-size: 0.9rem;
             }
         }
 
-        /* Маленькая подпись */
-        .footer-note {
-            margin-top: 28px;
-            font-size: 0.85rem;
-            color: #6a4c5a;
-            letter-spacing: 1px;
-            opacity: 0.7;
-            font-weight: 300;
-        }
-
-        /* Дополнительная анимация для сердечек при клике */
-        .burst {
-            animation: burst 0.6s ease-out forwards;
-        }
-
-        @keyframes burst {
-            0% { transform: scale(0.2); opacity: 0; }
-            50% { opacity: 1; transform: scale(1.8); }
-            100% { transform: scale(1); opacity: 0; }
-        }
-
-        /* Стиль для счётчика кликов (нежный) */
-        .click-counter {
-            font-size: 0.8rem;
-            margin-top: 12px;
-            color: #7a5a6a;
-            background: rgba(255, 255, 255, 0.2);
-            display: inline-block;
-            padding: 4px 16px;
-            border-radius: 30px;
-            backdrop-filter: blur(2px);
+        /* Анимация для "взрыва" */
+        .burst-item {
+            position: fixed;
+            pointer-events: none;
+            z-index: 999;
+            font-size: 1.6rem;
+            transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.3);
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <!-- Контейнер для фоновых сердечек -->
-    <div class="hearts-container" id="heartsContainer"></div>
 
-    <!-- Основная карточка -->
+    <div class="floating-container" id="floatingContainer"></div>
+
     <div class="card" id="card">
-        <div class="subtitle">🎂 Сегодня твой день</div>
-        <div class="name">Кристи</div>
-        <div class="flower-line">
-            <span>🌸</span> <span>🌺</span> <span>🌷</span> <span>🌹</span> <span>🌻</span>
+        <div class="subhead">🎈 Сегодня особенный день</div>
+        <div class="name">
+            <span class="emoji-big">👋</span> Кристи <span class="emoji-big">🎂</span>
+        </div>
+        <div class="tagline">
+            <span>✨</span> <span>🎉</span> <span>🌟</span> <span>🥳</span> <span>🎁</span>
         </div>
         <div class="message">
-            <i>«Ты — свет, который делает мир ярче. </i><br>
-            С каждым твоим днём все вокруг становится добрее и красивее. <br>
-            Пусть улыбка не покидает твоё лицо, а сердце поёт от счастья!» <br>
-            <span style="display: block; margin-top: 12px; font-weight: 300;">✨ С любовью и восхищением ✨</span>
+            <i>«Круто, что ты есть!»</i> — это, пожалуй, самое честное, что можно сказать. <br><br>
+            Желаю тебе побольше классных моментов, вкусной еды, хорошего настроения и чтобы все твои планы сбывались (даже самые спонтанные). <br>
+            <span style="display: inline-block; margin-top: 12px; font-weight: 400; background: rgba(255,215,190,0.2); padding: 2px 14px; border-radius: 30px;">🚀 Будь собой — это лучшая версия!</span>
         </div>
 
-        <!-- Кнопка с интерактивом -->
-        <button class="btn" id="surpriseBtn">💕 Подари улыбку 💕</button>
-        <div class="click-counter" id="clickCounter">❤️ 0</div>
-        <div class="footer-note">для самой прекрасной Кристи</div>
+        <button class="btn" id="actionBtn">🎊 Жмякни для настроения</button>
+        <div class="counter" id="clickCounter">⚡ 0</div>
+        <div class="footer">для Кристи — без пафоса, но с душой</div>
     </div>
 
     <script>
         (function() {
-            // ====== Генерация фоновых сердец ======
-            const heartsContainer = document.getElementById('heartsContainer');
-            const heartSymbols = ['❤️', '💖', '💗', '💘', '💝', '✨', '🌸', '🌺'];
+            const container = document.getElementById('floatingContainer');
+            const symbols = ['🎈', '🎉', '🎊', '⭐', '✨', '🌸', '🌼', '☀️', '🌈', '🎵', '🎶', '🍕', '🎂', '🥳', '👏', '💪', '🔥'];
 
-            function createHeart() {
-                const heart = document.createElement('span');
-                heart.classList.add('heart');
-                heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+            function createFloat() {
+                const el = document.createElement('span');
+                el.classList.add('float-item');
+                el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
                 
-                // Случайные размеры (от 1.2rem до 3rem)
                 const size = 1.2 + Math.random() * 2.2;
-                heart.style.fontSize = size + 'rem';
+                el.style.fontSize = size + 'rem';
+                el.style.left = Math.random() * 100 + '%';
+                const duration = 16 + Math.random() * 18;
+                el.style.animationDuration = duration + 's';
+                el.style.animationDelay = Math.random() * 12 + 's';
+                el.style.opacity = 0.15 + Math.random() * 0.25;
                 
-                // Случайная позиция по горизонтали
-                heart.style.left = Math.random() * 100 + '%';
+                container.appendChild(el);
                 
-                // Случайная длительность анимации (от 12 до 26 секунд)
-                const duration = 14 + Math.random() * 16;
-                heart.style.animationDuration = duration + 's';
-                
-                // Случайная задержка
-                heart.style.animationDelay = Math.random() * 10 + 's';
-                
-                // Немного меняем прозрачность
-                heart.style.opacity = 0.2 + Math.random() * 0.3;
-                
-                heartsContainer.appendChild(heart);
-                
-                // Удаляем сердечко после завершения анимации (чтобы не засорять DOM)
                 setTimeout(() => {
-                    if (heart.parentNode) {
-                        heart.remove();
-                    }
-                }, (duration + 5) * 1000);
+                    if (el.parentNode) el.remove();
+                }, (duration + 6) * 1000);
             }
 
-            // Создаём начальные сердечки
-            for (let i = 0; i < 20; i++) {
-                setTimeout(createHeart, i * 200);
+            // Запускаем начальную партию
+            for (let i = 0; i < 18; i++) {
+                setTimeout(createFloat, i * 180);
             }
+            setInterval(createFloat, 1600);
 
-            // Периодически добавляем новые сердца
-            setInterval(createHeart, 1800);
+            // ====== Кнопка и счётчик ======
+            const btn = document.getElementById('actionBtn');
+            const counter = document.getElementById('clickCounter');
+            let count = 0;
 
-            // ====== Интерактивность: кнопка и счётчик ======
-            const surpriseBtn = document.getElementById('surpriseBtn');
-            const clickCounter = document.getElementById('clickCounter');
-            let clickCount = 0;
-            
-            // Функция для создания "взрыва" сердечек при клике
-            function burstHearts(x, y) {
-                const count = 14;
-                for (let i = 0; i < count; i++) {
-                    const heart = document.createElement('span');
-                    heart.textContent = ['❤️', '💖', '💗', '💘', '💝', '✨', '🌸'][Math.floor(Math.random() * 7)];
-                    heart.style.position = 'fixed';
-                    heart.style.left = x + 'px';
-                    heart.style.top = y + 'px';
-                    heart.style.fontSize = (1.2 + Math.random() * 2.2) + 'rem';
-                    heart.style.pointerEvents = 'none';
-                    heart.style.zIndex = '999';
-                    heart.style.transition = 'all 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.2)';
-                    heart.style.opacity = '1';
+            // Функция "взрыва" эмодзи
+            function burst(x, y) {
+                const emojis = ['🎉', '🎊', '⭐', '✨', '🔥', '👏', '💪', '🥳', '🎈', '🌈', '☀️', '🍕', '🎂', '🎵'];
+                for (let i = 0; i < 12; i++) {
+                    const el = document.createElement('span');
+                    el.className = 'burst-item';
+                    el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                    el.style.left = x + 'px';
+                    el.style.top = y + 'px';
+                    el.style.fontSize = (1.2 + Math.random() * 2) + 'rem';
                     
-                    // Случайное направление
                     const angle = Math.random() * 2 * Math.PI;
-                    const distance = 80 + Math.random() * 180;
-                    const dx = Math.cos(angle) * distance;
-                    const dy = Math.sin(angle) * distance - 60;
+                    const dist = 70 + Math.random() * 150;
+                    const dx = Math.cos(angle) * dist;
+                    const dy = Math.sin(angle) * dist - 50;
                     
-                    document.body.appendChild(heart);
+                    document.body.appendChild(el);
                     
-                    // Запускаем анимацию через микротик
                     requestAnimationFrame(() => {
-                        heart.style.transform = `translate(${dx}px, ${dy}px) scale(0.4) rotate(${Math.random() * 360}deg)`;
-                        heart.style.opacity = '0';
+                        el.style.transform = `translate(${dx}px, ${dy}px) scale(0.3) rotate(${Math.random() * 360}deg)`;
+                        el.style.opacity = '0';
                     });
                     
-                    // Удаляем элемент после анимации
                     setTimeout(() => {
-                        if (heart.parentNode) {
-                            heart.remove();
-                        }
-                    }, 800);
+                        if (el.parentNode) el.remove();
+                    }, 750);
                 }
             }
 
-            // Обработчик клика по кнопке
-            surpriseBtn.addEventListener('click', function(e) {
-                // Увеличиваем счётчик
-                clickCount++;
-                clickCounter.textContent = '❤️ ' + clickCount;
+            btn.addEventListener('click', function(e) {
+                count++;
+                counter.textContent = '⚡ ' + count;
                 
-                // Меняем текст кнопки периодически
-                const phrases = ['💕 Ещё улыбку!', '✨ Ты прекрасна!', '🌹 С днём рождения!', '💖 Обнимаю!', '🌸 Ты — чудо!'];
-                const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-                surpriseBtn.textContent = randomPhrase;
+                // Меняем текст кнопки на что-то бодрое
+                const phrases = ['🎈 Ещё раз!', '🔥 Круто!', '🎊 Ура!', '👏 Класс!', '💪 Так держать!', '✨ Отлично!', '🥳 Погнали!'];
+                btn.textContent = phrases[Math.floor(Math.random() * phrases.length)];
                 
-                // Взрыв сердец в месте клика (или по центру карточки)
                 const rect = this.getBoundingClientRect();
                 const cx = rect.left + rect.width / 2;
                 const cy = rect.top + rect.height / 2;
-                burstHearts(cx, cy);
+                burst(cx, cy);
                 
-                // Дополнительно: лёгкая анимация карточки
+                // Лёгкая анимация карточки
                 const card = document.getElementById('card');
-                card.style.transition = 'transform 0.15s ease';
+                card.style.transition = 'transform 0.12s ease';
                 card.style.transform = 'scale(0.97)';
                 setTimeout(() => {
                     card.style.transform = 'scale(1)';
-                }, 150);
+                }, 130);
                 
-                // Добавляем пару плавающих сердечек в контейнер (для атмосферы)
-                for (let i = 0; i < 3; i++) {
-                    setTimeout(createHeart, i * 100);
+                // Добавляем пару float-элементов для атмосферы
+                for (let i = 0; i < 2; i++) {
+                    setTimeout(createFloat, i * 120);
                 }
             });
 
-            // Также можно кликать по карточке для дополнительного эффекта (но необязательно)
+            // Клик по карточке (но не по кнопке) — меньший взрыв
             document.getElementById('card').addEventListener('click', function(e) {
-                // Но только если клик не по кнопке (чтобы не дублировать)
-                if (e.target === surpriseBtn) return;
-                // Создаём пару сердец в месте клика
+                if (e.target === btn) return;
                 const rect = this.getBoundingClientRect();
                 const x = e.clientX || rect.left + rect.width / 2;
                 const y = e.clientY || rect.top + rect.height / 2;
-                // Небольшой взрыв, но поменьше
+                
                 for (let i = 0; i < 5; i++) {
-                    const heart = document.createElement('span');
-                    heart.textContent = ['💖', '💗', '✨', '🌸'][Math.floor(Math.random() * 4)];
-                    heart.style.position = 'fixed';
-                    heart.style.left = (x + (Math.random() - 0.5) * 40) + 'px';
-                    heart.style.top = (y + (Math.random() - 0.5) * 40) + 'px';
-                    heart.style.fontSize = (1 + Math.random() * 1.6) + 'rem';
-                    heart.style.pointerEvents = 'none';
-                    heart.style.zIndex = '999';
-                    heart.style.transition = 'all 0.6s ease-out';
-                    heart.style.opacity = '1';
-                    document.body.appendChild(heart);
+                    const el = document.createElement('span');
+                    el.className = 'burst-item';
+                    el.textContent = ['✨', '⭐', '🎈', '🌸', '☀️'][Math.floor(Math.random() * 5)];
+                    el.style.left = (x + (Math.random() - 0.5) * 40) + 'px';
+                    el.style.top = (y + (Math.random() - 0.5) * 40) + 'px';
+                    el.style.fontSize = (1 + Math.random() * 1.4) + 'rem';
+                    document.body.appendChild(el);
                     
-                    const dx = (Math.random() - 0.5) * 120;
-                    const dy = (Math.random() - 0.5) * 120 - 40;
+                    const dx = (Math.random() - 0.5) * 100;
+                    const dy = (Math.random() - 0.5) * 100 - 30;
                     requestAnimationFrame(() => {
-                        heart.style.transform = `translate(${dx}px, ${dy}px) scale(0.3) rotate(${Math.random() * 200}deg)`;
-                        heart.style.opacity = '0';
+                        el.style.transform = `translate(${dx}px, ${dy}px) scale(0.2) rotate(${Math.random() * 200}deg)`;
+                        el.style.opacity = '0';
                     });
                     
                     setTimeout(() => {
-                        if (heart.parentNode) heart.remove();
-                    }, 700);
+                        if (el.parentNode) el.remove();
+                    }, 600);
                 }
             });
 
